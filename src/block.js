@@ -48,7 +48,7 @@ class Block {
 
     computeHash(){
       let currentHash = this.hash;
-      this.hash = '';                                
+      this.hash = null;                                
       let computedHash = SHA256(JSON.stringify(this)).toString();
       this.hash = currentHash;
       return computedHash;
