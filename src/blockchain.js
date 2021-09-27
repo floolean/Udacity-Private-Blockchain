@@ -72,6 +72,7 @@ class Blockchain {
             self.chain.push(block);
             self.height = block.height;
             resolve(block);
+            self.validateChain();
           }
           catch(error) {
             reject(error);
